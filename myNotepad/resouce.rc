@@ -1,0 +1,395 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+1 MENU FIXED IMPURE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)\tCtrl+N",            IDM_EDNEWFILE
+        MENUITEM "打开(&O)...\tCtrl+O",         IDM_EDOPEN
+        MENUITEM "保存(&S)\tCtrl+S",            IDM_EDSAVE
+        MENUITEM "另存为(&A)...",               IDM_EDOTHERSAVE
+        MENUITEM SEPARATOR
+        MENUITEM "页面设置(&U)...",             5
+        MENUITEM "打印(&P)...\tCtrl+P",         6
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    IDM_EDEXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "撤消(&U)\tCtrl+Z",            IDM_EDUNDO
+        MENUITEM SEPARATOR
+        MENUITEM "剪切(&T)\tCtrl+X",            IDM_EDCUT, GRAYED
+        MENUITEM "复制(&C)\tCtrl+C",            IDM_EDCOPY, GRAYED
+        MENUITEM "粘贴(&P)\tCtrl+V",            IDM_EDPASTE, GRAYED
+        MENUITEM "删除(&L)\tDel",               IDM_EDDEL, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "查找(&F)...\tCtrl+F",         IDM_EDFIND
+        MENUITEM "查找下一个(&N)\tF3",          IDM_EDFINDNEXT
+        MENUITEM "替换(&R)...\tCtrl+H",         IDM_EDREPLACE
+        MENUITEM "转到(&G)...\tCtrl+G",         IDM_EDGOLINE
+        MENUITEM SEPARATOR
+        MENUITEM "全选(&A)\tCtrl+A",            IDM_EDSETALL
+        MENUITEM "时间/日期(&D)\tF5",           IDM_EDDATE
+    END
+    POPUP "格式(&O)"
+    BEGIN
+        MENUITEM "自动换行(&W)",                IDM_EDAUTOLINE
+        MENUITEM "字体(&F)...",                 IDM_EDFONT
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "状态栏(&S)",                  27
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "查看帮助(&H)",                64
+        MENUITEM SEPARATOR
+        MENUITEM "关于记事本(&A)",              65
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+11 DIALOGEX 20, 20, 200, 64
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "记事本"
+FONT 9, "宋体", 0, 0, 0x86
+BEGIN
+    DEFPUSHBUTTON   "取消",2,84,44,32,14,WS_GROUP
+    CTEXT           "正在打印",-1,0,8,200,9
+    CTEXT           "",20,0,18,200,9,SS_PATHELLIPSIS
+    CTEXT           "",21,0,28,200,9
+END
+
+12 DIALOGEX 0, 0, 356, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "页面设置"
+FONT 9, "宋体", 0, 0, 0x86
+BEGIN
+    GROUPBOX        "纸张",1073,8,8,224,56,WS_GROUP
+    LTEXT           "大小(&Z):",1089,16,24,36,9
+    COMBOBOX        1137,64,23,160,160,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    LTEXT           "来源(&S):",1090,16,45,36,9
+    COMBOBOX        1138,64,42,160,160,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "方向",1072,8,69,64,56,WS_GROUP
+    CONTROL         "纵向(&O)",1056,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,16,82,52,12
+    CONTROL         "横向(&A)",1057,"Button",BS_AUTORADIOBUTTON,16,103,52,12
+    GROUPBOX        "边距",1075,80,69,152,56,WS_GROUP
+    LTEXT           "左(&L):",1102,88,85,32,9
+    EDITTEXT        1155,120,82,28,12,WS_GROUP
+    LTEXT           "右(&R):",1103,164,85,32,9
+    EDITTEXT        1157,196,82,28,12,WS_GROUP
+    LTEXT           "上(&T):",1104,88,104,32,9
+    EDITTEXT        1156,120,103,28,12,WS_GROUP
+    LTEXT           "下(&B):",1105,164,104,32,9
+    EDITTEXT        1158,196,103,28,12,WS_GROUP
+    LTEXT           "页眉(&H):",32,8,135,44,9
+    EDITTEXT        30,56,134,174,12,ES_AUTOHSCROLL
+    LTEXT           "页脚(&F):",33,8,154,43,9
+    EDITTEXT        31,56,153,174,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",1,166,174,58,14,WS_GROUP
+    PUSHBUTTON      "取消",2,228,174,58,14
+    PUSHBUTTON      "打印机(&P)...",1026,290,174,58,14
+    GROUPBOX        "预览",-1,240,8,108,158
+    CONTROL         "",1080,"Static",SS_WHITERECT,254,46,80,80
+    CONTROL         "",1081,"Static",SS_GRAYRECT,334,50,4,80
+    CONTROL         "",1082,"Static",SS_GRAYRECT,262,122,80,4
+END
+
+IDD_GOTOLINE DIALOG DISCARDABLE  0, 0, 166, 60
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "转到指定行"
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "行号(&L):",1200,7,7,115,9
+    EDITTEXT        IDE_LINENUM,7,18,151,14,ES_AUTOHSCROLL | ES_NUMBER
+    DEFPUSHBUTTON   "转到",1,55,39,50,14
+    PUSHBUTTON      "取消",2,109,39,50,14
+END
+
+15 DIALOG DISCARDABLE  30, 17, 300, 22
+STYLE DS_3DLOOK | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 9, "宋体"
+BEGIN
+    LTEXT           "编码(&E):",259,68,1,40,40,NOT WS_GROUP
+    COMBOBOX        257,130,0,164,100,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_GROUP | WS_TABSTOP
+END
+
+18432 DIALOG FIXED IMPURE  0, 0, 5, 5
+STYLE 0x0L
+FONT 10, "System"
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDA_ACC ACCELERATORS FIXED IMPURE 
+BEGIN
+    "A",            IDM_EDSETALL,           VIRTKEY, CONTROL, NOINVERT
+    "C",            IDM_EDCOPY,             VIRTKEY, CONTROL, NOINVERT
+    "F",            IDM_EDFIND,             VIRTKEY, CONTROL, NOINVERT
+    "G",            IDM_EDGOLINE,           VIRTKEY, CONTROL, NOINVERT
+    "H",            IDM_EDREPLACE,          VIRTKEY, CONTROL, NOINVERT
+    "N",            IDM_EDNEWFILE,          VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_EDOPEN,             VIRTKEY, CONTROL, NOINVERT
+    "P",            6,                      VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_EDSAVE,             VIRTKEY, CONTROL, NOINVERT
+    "V",            IDM_EDPASTE,            VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        IDM_EDUNDO,             VIRTKEY, ALT, NOINVERT
+    VK_F1,          64,                     VIRTKEY, NOINVERT
+    VK_F3,          IDM_EDFINDNEXT,         VIRTKEY, NOINVERT
+    VK_F5,          IDM_EDDATE,             VIRTKEY, NOINVERT
+    VK_INSERT,      IDM_EDCOPY,             VIRTKEY, CONTROL, NOINVERT
+    "X",            IDM_EDCUT,              VIRTKEY, CONTROL, NOINVERT
+    "Z",            IDM_EDUNDO,             VIRTKEY, CONTROL, NOINVERT
+END
+
+SLIPUPACC ACCELERATORS FIXED IMPURE 
+BEGIN
+    "N",            1,                      VIRTKEY, CONTROL
+    "O",            2,                      VIRTKEY, CONTROL
+    "S",            3,                      VIRTKEY, CONTROL
+    "P",            6,                      VIRTKEY, CONTROL
+    VK_INSERT,      769,                    VIRTKEY, CONTROL
+    VK_F1,          64,                     VIRTKEY 
+    VK_F3,          22,                     VIRTKEY 
+    VK_F5,          26,                     VIRTKEY 
+    "G",            24,                     VIRTKEY, CONTROL
+    "F",            21,                     VIRTKEY, CONTROL, NOINVERT
+    "H",            23,                     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        16,                     VIRTKEY, ALT
+    "Z",            16,                     VIRTKEY, CONTROL
+    "X",            768,                    VIRTKEY, CONTROL
+    "C",            769,                    VIRTKEY, CONTROL
+    "V",            770,                    VIRTKEY, CONTROL
+    "A",            25,                     VIRTKEY, CONTROL
+    VK_ESCAPE,      7,                      VIRTKEY 
+    "C",            7,                      VIRTKEY, CONTROL
+    "D",            7,                      VIRTKEY, CONTROL
+    "Z",            7,                      VIRTKEY, CONTROL
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+1 VERSIONINFO
+ FILEVERSION 6,1,7600,16385
+ PRODUCTVERSION 6,1,7600,16385
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Microsoft Corporation\0"
+            VALUE "FileDescription", "记事本\0"
+            VALUE "FileVersion", "6.1.7600.16385 (win7_rtm.090713-1255)\0"
+            VALUE "InternalName", "Notepad\0"
+            VALUE "LegalCopyright", "? Microsoft Corporation. All rights reserved.\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "NOTEPAD.EXE.MUI\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Microsoft? Windows? Operating System\0"
+            VALUE "ProductVersion", "6.1.7600.16385\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_NOTEPAD             ICON    DISCARDABLE     "notepad_2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    1                       "不能打开文件: %%。\n\n请确认指定的驱动器中是否有盘。"
+    2                       "找不到文件: %%。\n\n要创建新文件吗?"
+    3                       "文件 %% 的文本已经更改。\n\n想保存文件吗?"
+    4                       "无标题"
+    5                       "%1 - 记事本"
+    6                       "找不到 ""%%"""
+    7                       "无足够的可用内存完成该操作。请关闭部分应用程序以增加可用内存，然后再试一次。"
+    8                       "文件 %% 太长，无法用记事本打开。\n\n请使用其他编辑器。"
+    9                       "记事本"
+    10                      "未能初始化文件对话框。更改文件名，再试一次。"
+    11                      "未能初始化打印对话框。请确认打印机已正确连接，并用“控制面板”确认打印机已正确配置。"
+    12                      "不能打印 %% 文件。请检查打印机是否正常连接，同时使用控制面板检查打印机的配置情况。"
+    13                      "不是有效文件名。"
+    14                      "不能创建文件 %%。\n\n请确认路径和文件名是否正确。"
+    15                      "不能进行自动换行，因为该文件的文本太长。"
+END
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    16                      "%%"
+    17                      "notepad.hlp"
+    18                      "&f"
+    19                      "第 &p 页"
+    20                      "文本文档(*.txt)"
+    21                      "所有文件 "
+    22                      "打开"
+    23                      "另存为"
+    24                      "记事本中的“另存为”对话框未关闭，\n因此无法关闭或注销 Windows。请切\n换到记事本，关闭此对话框，然后重\n试关闭或注销 Windows。"
+    25                      "不能访问您的打印机。\n请检查打印机是否正常连接，同时使用控制面板检查打印机的配置情况。"
+    26                      "%%\n您没有权限打开该文件，请向文件的所有者或管理员申请权限。"
+    27                      "%%\n该文件含有 Unicode 格式的字符，当文件保存为 ANSI 编码的文本文件时，该字符将丢失。要保存 Unicode 信息，单击下面的“取消”，然后从编码列表中选择一个 Unicode 选项。继续吗?"
+    28                      "纸张小于行高，无法打印。\n请换用较小的字体打印。"
+    29                      "共用对话框错误(0x%04x)"
+    30                      "记事本 - 跳行"
+    31                      "行数超过了总行数"
+END
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    32                      "ANSI"
+    33                      "Unicode"
+    34                      "Unicode big endian"
+    35                      "UTF-8"
+    36                      "第 %d 页"
+    37                      "   第 %d 行，第 %d 列"
+    38                      " 压缩，"
+    39                      " 加密，"
+    40                      " 隐藏，"
+    41                      " 脱机，"
+    42                      " 只读，"
+    43                      " 系统，"
+    44                      " 文件"
+    45                      "fFpPtTdDcCrRlL"
+    46                      "编码(&E):"
+    47                      "记事本正在一个已完成的事务中运行。\n\n要非事务性地保存 %% 文件吗?"
+END
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    469                     "文本文档"
+    470                     "新建文本文档"
+END
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    3000                    "记事本"
+    3001                    "是否将更改保存到 %%?"
+    3002                    "保存(&S)"
+    3003                    "不保存(&N)"
+END
+
+STRINGTABLE FIXED IMPURE 
+BEGIN
+    51203                   "此计算机未运行正版 Windows"
+    51204                   "软件授权"
+    51205                   "mshelp://windows/?id=6f58b1c8-e296-4498-8454-99558fde70bf"
+    51206                   "http://go.microsoft.com/fwlink/?LinkId=125824"
+    51207                   "http://go.microsoft.com/fwlink/?LinkId=125723"
+    51208                   "http://go.microsoft.com/fwlink/?LinkId=122082"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
